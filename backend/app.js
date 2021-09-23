@@ -1,12 +1,18 @@
 const express = require ('express')
+const app = express()
 const cookieParser =require('cookie-parser')
 
 const bodyparser = require('body-parser')
 const fileUpload = require('express-fileupload')
+const dotenv = require('dotenv')
+
 
 const errorMiddleware = require ('./middlewares/errorMiddleware')
 
-const app = express()
+//Setting up config file
+dotenv.config({path:'backend/config/config.env'})
+
+
 
 app.use(express.json())
 app.use(bodyparser.urlencoded({extended:true}))
