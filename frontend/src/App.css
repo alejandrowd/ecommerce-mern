@@ -27,7 +27,8 @@ body {
 }
 
 nav {
-  background-color: #232f3e;
+  /* background-color: #232f3e; */
+  background-color: red;
   padding: 1rem 1rem;
 }
 
