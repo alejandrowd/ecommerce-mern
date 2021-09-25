@@ -68,8 +68,7 @@ userSchema.methods.comparePassword = async function(enteredPassword){
 //generate Token
 userSchema.methods.generateAuthToken = function(){
     const user = this
-    // return jwt.sign({ id:user._id },process.env.JWT_SECRET,{expiresIn:process.env.JWT_EXPIRES_TIME})
-    return jwt.sign({ id:user._id },process.env.JWT_SECRET)
+    return jwt.sign({ id:user._id },process.env.JWT_SECRET,{expiresIn:process.env.JWT_EXPIRES_TIME})
 }
 
 
